@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognifyz Task 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- १. नेव्हिगेशन बार -->
+    <nav class="navbar">
+        <button onclick="navigate('home')">Home</button>
+        <button onclick="navigate('register')">Register Form</button>
+        <button onclick="navigate('dashboard')">Dashboard</button>
+    </nav>
+
+    <!-- सर्व पेजेसचा मुख्य भाग -->
+    <main class="content">
+
+        <!-- होम पेज -->
+        <div id="page-home" class="page active">
+            <h1>Welcome to Cognifyz Task 4</h1>
+            <p>वरील बटनवर क्लिक करून पेज न बदलता नेव्हिगेट करा.</p>
+        </div>
+
+        <!-- रजिस्टर पेज -->
+        <div id="page-register" class="page">
+            <h2>Account Registration</h2>
+            <form id="regForm">
+                <div class="input-group">
+                    <label>Username:</label>
+                    <input type="text" id="username" placeholder="Enter username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Password:</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                    <div class="meter-bg">
+                        <div id="strength-bar"></div>
+                    </div>
+                    <span id="strength-text">Password टाका...</span>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- डॅशबोर्ड पेज -->
+        <div id="page-dashboard" class="page">
+            <h2>Dynamic Task Manager</h2>
+            <div class="todo-box">
+                <input type="text" id="taskInput" placeholder="नवीन काम इथे लिहा...">
+                <button id="addBtn" class="btn">Add Item</button>
+            </div>
+            <ul id="taskList"></ul>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
